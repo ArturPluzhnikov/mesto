@@ -15,7 +15,8 @@ function openForm() {
 
 formOpenButton.addEventListener('click', openForm)
 
-function closeForm() {
+function closeForm(evt) {
+  evt.preventDefault();
   form.classList.remove('form__opened')
 }
 
