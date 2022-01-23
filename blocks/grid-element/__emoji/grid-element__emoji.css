@@ -1,0 +1,9 @@
+.grid-element__emoji {
+  width: 22px;
+  height: 18px;
+  transition: 0.3s;
+}
+
+.grid-element__emoji:hover {
+  opacity: 0.5;
+}

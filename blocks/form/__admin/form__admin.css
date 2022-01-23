@@ -1,0 +1,17 @@
+.form__admin {
+  width: 430px;
+  height: 330px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 680px) {
+  .form__admin {
+    width: 282px;
+    height: 322px;
+    
+  }
+}

@@ -1,0 +1,10 @@
+.form__data_description {
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 680px) {
+  .form__data_description {
+    margin-bottom: 45px;
+  }
+}
+

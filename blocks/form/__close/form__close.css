@@ -1,0 +1,16 @@
+.form__close {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  margin-left: 430px;
+  margin-top: -32px;
+  background: none;
+  border: none;
+  padding: 0 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form__close:hover {
+  opacity: 0.6;
+}
