@@ -27,7 +27,7 @@ function formSubmitHandler(evt) {
   evt.preventDefault();
     nameOutput.textContent = nameInput.value;
     jobOutput.textContent = jobInput.value;
-    closeForm();
+    closeForm(evt);
 }
 
 form.addEventListener('submit', formSubmitHandler); 

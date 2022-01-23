@@ -9,6 +9,7 @@
   padding: 0 0;
   cursor: pointer;
   transition: 0.3s;
+  background-image: url(../../../Images/CloseIcon.svg);
 }
 
 .form__close:hover {
