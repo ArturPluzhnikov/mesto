@@ -1,17 +1,16 @@
 .profile__edit-button {
-  border: 1px solid #ffffff;
-  height: 22px;
-  width: 22px;
-  background: none;
-  cursor: pointer;
-  transition: 0.3s;
-  padding: 0 0;
   background-image: url(../../../Images/pencil.svg);
+  margin: 0px;
+  width: 24px;
+  height: 24px;
+  background-color: black;
   background-repeat: no-repeat;
   background-position: center;
-  display: inline-block;
-  margin: 0 0;
-  margin-left: 18px;
+  border: 1px solid white;
+  align-items: center;
+  grid-area: edit-button;
+  align-self: center;
+  cursor: pointer;
 }
 
 .profile__edit-button:hover {

@@ -1,6 +1,8 @@
 .grid-element__description {
+  width: 100%;
+  height: calc(361px - 282px);
   display: flex;
   justify-content: space-between;
-  margin: 25px 15px 31px 21px;
   align-items: center;
+  
 }

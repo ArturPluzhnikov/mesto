@@ -1,15 +1,19 @@
 .profile__description {
-  max-width: 336px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: fit-content(294px) 24px;
   align-content: center;
+  grid-template-areas:
+  "title edit-button"
+  "subtitle subtitle";
+  margin: 0 0;
   margin-left: 30px;
+  justify-content: start;
+  column-gap: 18px;
+  row-gap: 16px;
 }
 
 @media screen and (max-width: 680px) {
   .profile__description {
     margin: 0 auto 36px;
-    
   }
 }

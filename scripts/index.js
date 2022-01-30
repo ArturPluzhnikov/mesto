@@ -1,11 +1,11 @@
-const formOpenButton = document.querySelector('.profile__edit-button')
-const form = document.querySelector('.form')
-const formCloseButton = document.querySelector('.form__close')
-const formSubmit = document.querySelector('.form__button')
-const nameInput = document.querySelector('.form__data_name')
-const jobInput = document.querySelector('.form__data_description')
-const nameOutput = document.querySelector('.profile__title')
-const jobOutput = document.querySelector('.profile__subtitle')
+let formOpenButton = document.querySelector('.profile__edit-button')
+let form = document.querySelector('.form')
+let formCloseButton = document.querySelector('.form__close')
+let formSubmit = document.querySelector('.form__button')
+let nameInput = document.querySelector('.form__data_name')
+let jobInput = document.querySelector('.form__data_description')
+let nameOutput = document.querySelector('.profile__title')
+let jobOutput = document.querySelector('.profile__subtitle')
 
 function openForm() {
   nameInput.value = nameOutput.textContent

@@ -2,6 +2,7 @@
   width: 22px;
   height: 18px;
   transition: 0.3s;
+  margin-right: 15px;
 }
 
 .grid-element__emoji:hover {

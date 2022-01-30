@@ -1,10 +1,12 @@
 .profile__subtitle {
-  max-width: 350px;
-  margin: 0 0;
+  margin: 0;
+  max-width: 250px;
+  font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+  grid-area: subtitle;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
