@@ -28,6 +28,6 @@
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__data-container/form__data-container.css);
 @import url(../blocks/form/__input/form__input.css);
-@import url(../blocks/form/__data-container/_name/form__data-container_name.css);
-@import url(../blocks/form/__data-container/_description/form__data-container_description.css);
+@import url(../blocks/form/__input/_name/form__input_name.css);
+@import url(../blocks/form/__input/_description/form__input_description.css);
 @import url(../blocks/form/__title/form__title.css);
