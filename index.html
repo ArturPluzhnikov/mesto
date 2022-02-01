@@ -7,28 +7,30 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head> 
   <body class="page">
-    <section class="form">
-        <form class="form__admin">
-          <button class="form__close"></button>
+    <div class="popup">
+      <div class="form">
+        <button class="popup__close-button" type="button" aria-label="close"></button>
+        <form class="form__admin" name="form">
           <h2 class="form__title">Редактировать профиль</h2>
           <fieldset class="form__data-container">
-            <input class="form__data form__data_name" type="text" name="name" placeholder="Имя">
-            <input class="form__data form__data_description" type="text" name="job" placeholder="Описание">
+            <input class="form__input form__data-container_name" type="text" name="name" placeholder="Имя" required>
+            <input class="form__input form__data-container_description" type="text" name="job" placeholder="Описание" required>
             <button class="form__button" type="submit">Сохранить</button>
           </fieldset>
         </form>
-    </section>
+      </div>
+    </div>
     <header class="header">
-      <img class="header__logo" src="./Images/logo.svg" alt="логотип">
+      <img class="header__logo" src="./images/logo.svg" alt="логотип">
     </header>
     <main class="content">
       <section class="profile">
         <div class="profile__info">
-          <img class="profile__avatar" src="./Images/image.jpg" alt="аватар">
+          <img class="profile__avatar" src="./images/image.jpg" alt="аватар">
           <div class="profile__description">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
               <p class="profile__subtitle">Исследователь океана</p>
-              <button class="profile__edit-button" type="button">
+              <button class="profile__edit-button" type="button" aria-label="edit">
               </button>
           </div>
         </div>
@@ -36,53 +38,59 @@
         </button>
       </section>
       <section class="elements">
-        <div class="grid-element">
-          <img class="grid-element__image" src="./Images/Karachaevsk.jpg" alt="фотография церкви">
+        <article class="grid-element">
+          <img class="grid-element__image" src="./images/Karachaevsk.jpg" alt="фотография церкви">
           <div class="grid-element__description">
-            <p class="grid-element__title">Карачаевск</p>
-            <img class="grid-element__emoji" src="./Images/Like.svg" alt="сердечко">
+            <h2 class="grid-element__title">Карачаевск</h2>
+            <button class="grid-element__emoji" type="button" aria-label="like">
+            </button>
           </div>
-        </div>
-        <div class="grid-element">
-          <img class="grid-element__image" src="./Images/Elbrus.jpg" alt="фотография Эльбруса">
+        </article>
+        <article class="grid-element">
+          <img class="grid-element__image" src="./images/Elbrus.jpg" alt="фотография Эльбруса">
           <div class="grid-element__description">
-            <p class="grid-element__title">Гора Эльбрус</p>
-            <img class="grid-element__emoji" src="./Images/Like.svg" alt="сердечко">
+            <h2 class="grid-element__title">Гора Эльбрус</h2>
+            <button class="grid-element__emoji" type="button" aria-label="like">
+            </button>
           </div>
-        </div>
-        <div class="grid-element">
-          <img class="grid-element__image" src="./Images/Dombai.jpg" alt="фотография гор">
+        </article>
+        <article class="grid-element">
+          <img class="grid-element__image" src="./images/Dombai.jpg" alt="фотография гор">
           <div class="grid-element__description">
-            <p class="grid-element__title">Домбай</p>
-            <img class="grid-element__emoji" src="./Images/Like.svg" alt="сердечко">
+            <h2 class="grid-element__title">Домбай</h2>
+            <button class="grid-element__emoji" type="button" aria-label="like">
+            </button>
           </div>
-        </div>
-        <div class="grid-element">
-          <img class="grid-element__image" src="./Images/Elbrus.jpg" alt="фотография Эльбруса">
+        </article>
+        <article class="grid-element">
+          <img class="grid-element__image" src="./images/Elbrus.jpg" alt="фотография Эльбруса">
           <div class="grid-element__description">
-            <p class="grid-element__title">Гора Эльбрус</p>
-            <img class="grid-element__emoji" src="./Images/Like.svg" alt="сердечко">
+            <h2 class="grid-element__title">Гора Эльбрус</h2>
+            <button class="grid-element__emoji" type="button" aria-label="like">
+            </button>
           </div>
-        </div>
-        <div class="grid-element">
-          <img class="grid-element__image" src="./Images/Dombai.jpg" alt="фотография гор">
+        </article>
+        <article class="grid-element">
+          <img class="grid-element__image" src="./images/Dombai.jpg" alt="фотография гор">
           <div class="grid-element__description">
-            <p class="grid-element__title">Домбай</p>
-            <img class="grid-element__emoji" src="./Images/Like.svg" alt="сердечко">
+            <h2 class="grid-element__title">Домбай</h2>
+            <button class="grid-element__emoji" type="button" aria-label="like">
+            </button>
           </div>
-        </div>
-        <div class="grid-element">
-          <img class="grid-element__image" src="./Images/Karachaevsk.jpg" alt="фотография церкви">
+        </article>
+        <article class="grid-element">
+          <img class="grid-element__image" src="./images/Karachaevsk.jpg" alt="фотография церкви">
           <div class="grid-element__description">
-            <p class="grid-element__title">Карачаево-Черкессия</p>
-            <img class="grid-element__emoji" src="./Images/Like.svg" alt="сердечко">
+            <h2 class="grid-element__title">Карачаево-Черкессия</h2>
+            <button class="grid-element__emoji" type="button" aria-label="like">
+            </button>
           </div>
-        </div>
-      </section>
-      <section class="footer">
-        <p class="footer__title">© 2020 Mesto Russia</p>
+        </article>
       </section>
     </main>
+    <footer class="footer">
+      <p class="footer__title">© 2020 Mesto Russia</p>
+    </footer>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

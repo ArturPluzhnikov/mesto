@@ -1,5 +1,5 @@
 .profile__edit-button {
-  background-image: url(../../../Images/pencil.svg);
+  background-image: url(../../../images/pencil.svg);
   margin: 0px;
   width: 24px;
   height: 24px;
@@ -15,4 +15,11 @@
 
 .profile__edit-button:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+  }
 }
