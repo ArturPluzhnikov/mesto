@@ -1,5 +1,5 @@
 .grid-element__description {
-  width: 100%;
+  max-width: 100%;
   min-height: 79px;
   display: flex;
   justify-content: space-between;

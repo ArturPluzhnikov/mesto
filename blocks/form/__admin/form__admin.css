@@ -1,18 +1,19 @@
 .form__admin {
   width: 100%;
   max-width: 430px;
-  min-height: 330px;
+  height: 330px;
   background-color: #ffffff;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   opacity: 1;
+  padding-bottom: 0;
 }
 
 @media screen and (max-width: 680px) {
   .form__admin {
-    width: 100%;
-    max-width: 282px;
-    min-height: 322px;
+    width: 282px;
+    height: 322px;
+    padding-bottom: 0;
   }
 }

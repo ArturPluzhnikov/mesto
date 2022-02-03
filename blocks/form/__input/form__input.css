@@ -7,6 +7,7 @@
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
+  padding-bottom: 8px;
 }
 
 .form__input:last-of-type {
@@ -15,7 +16,7 @@
 
 @media screen and (max-width: 680px) {
   .form__input {
-    width: 238px;
+    width: 234px;
   }
 
   .form__input:last-of-type {
