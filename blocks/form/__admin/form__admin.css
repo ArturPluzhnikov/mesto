@@ -1,7 +1,6 @@
 .form__admin {
   width: 100%;
   max-width: 430px;
-  height: 330px;
   background-color: #ffffff;
   margin: 0 auto;
   border-radius: 10px;
@@ -13,7 +12,6 @@
 @media screen and (max-width: 680px) {
   .form__admin {
     width: 282px;
-    height: 322px;
     padding-bottom: 0;
   }
 }

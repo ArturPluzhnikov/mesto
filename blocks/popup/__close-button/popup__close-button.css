@@ -4,12 +4,14 @@
   position: absolute;
   top: calc(50% - (330px / 2) - 32px - 8px);
   left: calc(50% + (430px / 2) + 8px);
+  top: 250px;
+  right: 380px;
   background: none;
   border: none;
   padding: 0 0;
   cursor: pointer;
   transition: 0.3s;
-  background-image: url(../../../Images/CloseIcon.svg);
+  background-image: url(../../../images/closeicon.svg);
 }
 
 .popup__close-button:hover {
