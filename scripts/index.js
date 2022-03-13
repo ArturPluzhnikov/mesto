@@ -1,6 +1,6 @@
 const popupProfileOpenButton = document.querySelector('.profile__edit-button');
-const popupProfile = document.querySelector('.popup_profile');
-const popupProfileCloseButton = popupProfile.querySelector('.popup__close-button');
+const popupProfile = document.querySelector('.popup-profile');
+const popupProfileCloseButton = popupProfile.querySelector('.popup-profile__close-button');
 const form = document.querySelector('.form')
 const nameInput = document.querySelector('.form__input_type_name');
 const jobInput = document.querySelector('.form__input_type_description');
@@ -32,16 +32,16 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
-const popupPlaces = document.querySelector('.popup_places');
-const popupPlacesCloseButton = popupPlaces.querySelector('.popup_places__close-button');
+const popupPlaces = document.querySelector('.popup-places');
+const popupPlacesCloseButton = popupPlaces.querySelector('.popup-places__close-button');
 const popupPlacesOpenButton = document.querySelector('.profile__add-button');
-const formPlaces = document.querySelector('.form_places');
+const formPlaces = document.querySelector('.form__places');
 const placesContainer = document.querySelector('.elements');
 const placeTemplate = document.querySelector('#place-template').content;
-const popupSized = document.querySelector('.popup_sized');
-const popupSizedCloseButton = popupSized.querySelector('.popup_sized__close-button');
-const popupSizedImage = popupSized.querySelector('.popup_sized__image');
-const popupSizedTitle = popupSized.querySelector('.popup_sized__title');
+const popupSized = document.querySelector('.popup-sized');
+const popupSizedCloseButton = popupSized.querySelector('.popup-sized__close-button');
+const popupSizedImage = popupSized.querySelector('.popup-sized__image');
+const popupSizedTitle = popupSized.querySelector('.popup-sized__title');
 
 
 function renderCards(initialCards) {
@@ -88,7 +88,7 @@ function handleLike(evt) {
 }
 
 function handleSize(evt) {
-  document.querySelector('.popup_sized').classList.add('popup_opened');
+  document.querySelector('.popup-sized').classList.add('popup_opened');
   popupSizedImage.src = evt.target.closest('.grid-element__image').src;
   popupSizedTitle.textContent = evt.target.closest('.grid-element__image').alt;
 };

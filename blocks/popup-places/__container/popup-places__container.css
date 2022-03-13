@@ -1,4 +1,4 @@
-.popup__container {
+.popup-places__container {
   width: 100%;
   max-width: 430px;
   background-color: #ffffff;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 680px) {
-  .popup__container {
+  .popup-places__container {
     max-width: 282px;
     padding-bottom: 0;
   }
