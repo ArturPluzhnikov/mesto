@@ -8,39 +8,39 @@
 </head> 
   <body class="page">
 
-    <div class="popup-profile">
+    <div class="popup popup-profile">
       <div class="popup-profile__container">
         <button class="close-button popup-profile__close-button" type="button" aria-label="close"></button>
-        <form class="form" name="form">
+        <form class="form form-profile" name="formProfile">
           <h2 class="form__title">Редактировать профиль</h2>
           <fieldset class="form__data-container">
-            <input class="form__input form__input_type_name" type="text" name="name" placeholder="Имя" required>
-            <input class="form__input form__input_type_description" type="text" name="job" placeholder="Описание" required>
+            <input class="form__input form__input_type_name" type="text" name="nameProfile" placeholder="Имя" required>
+            <input class="form__input form__input_type_description" type="text" name="jobProfile" placeholder="Описание" required>
             <button class="form__button" type="submit">Сохранить</button>
           </fieldset>
         </form>
       </div>
     </div>
 
-    <div class="popup-places">
+    <div class="popup popup-places">
       <div class="popup-places__container">
         <button class="close-button popup-places__close-button" type="button" aria-label="close"></button>
-        <form class="form form-places" name="form">
+        <form class="form form-places" name="formPlaces">
           <h2 class="form__title">Новое место</h2>
           <fieldset class="form__data-container">
-            <input class="form__input form__input_type_name" type="text" name="title" placeholder="Название" required>
-            <input class="form__input form__input_type_description" type="link" name="link" placeholder="Ссылка на картинку" required>
+            <input class="form__input form__input_type_title" type="text" name="titlePlaces" placeholder="Название" required>
+            <input class="form__input form__input_type_link" type="link" name="linkPlaces" placeholder="Ссылка на картинку" required>
             <button class="form__button" type="submit">Создать</button>
           </fieldset>
         </form>
       </div>
     </div>
 
-    <div class="popup-sized">
-      <div class="popup-sized__container">
-        <img class="popup-sized__image" src="./images/arkhyz.jpeg">
-        <button class="close-button popup-sized__close-button" type="button" aria-label="close"></button>
-        <h2 class="popup-sized__title"></h2>
+    <div class="popup popup-photo">
+      <div class="popup-photo__container">
+        <img class="popup-photo__image" src="" alt="">
+        <button class="close-button popup-photo__close-button" type="button" aria-label="close"></button>
+        <h2 class="popup-photo__title"></h2>
       </div>
     </div>
 
@@ -62,23 +62,24 @@
         </button>
       </section>
       <section class="elements">
-    
       </section>
     </main>
     <footer class="footer">
       <p class="footer__title">© 2020 Mesto Russia</p>
     </footer>
-    <template id="place-template">
+
+    <template id="card-template">
       <article class="grid-element">
         <button class="grid-element__trash" type="button"></button>
         <img class="grid-element__image" src="./images/dombai.jpg" alt="">
         <div class="grid-element__description">
-          <h2 class="grid-element__title">AAAAAAAAAA</h2>
+          <h2 class="grid-element__title"></h2>
           <button class="grid-element__emoji" type="button" aria-label="like">
           </button>
         </div>
       </article>
     </template>
+    
     <script src="./scripts/index.js"></script>
   </body>
 </html>
