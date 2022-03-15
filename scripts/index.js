@@ -97,8 +97,6 @@ function handleScaleCard(evt) {
 };
 
 function openPopup(popup) {
-  formProfileNameInput.value = formProfileNameOutput.textContent;
-  formProfileJobInput.value = formProfileJobOutput.textContent;
   popup.classList.add('popup_opened');
 };
 
@@ -113,7 +111,11 @@ function addListeners(el) {
 };
 formPlaces.addEventListener('submit', handleFormPlacesSubmit);
 formProfile.addEventListener('submit', handleFormProfileSubmit); 
-popupProfileOpenButton.addEventListener('click', () => openPopup(popupProfile));
+popupProfileOpenButton.addEventListener('click', () => {
+  formProfileNameInput.value = formProfileNameOutput.textContent;
+  formProfileJobInput.value = formProfileJobOutput.textContent;
+  openPopup(popupProfile)
+});
 popupPlacesOpenButton.addEventListener('click', () => openPopup(popupAddPlaces))
 popupProfileCloseButton.addEventListener('click', () => closePopup(popupProfile));
 popupPhotoCloseButton.addEventListener('click', () => closePopup(popupPhoto));
