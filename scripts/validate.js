@@ -4,7 +4,7 @@ const config = {
   submitButtonSelector: '.form__button',
   inactiveButtonClass: 'form__button_disabled',
   inputErrorClass: 'form__input_error',
-  errorClass: 'form__input-error_text_active'
+  errorClass: 'form__input-error_active'
 };
 
 function setErrorMessage(formElement, inputElement, errorMessage, inputErrorClass, errorClass) {
