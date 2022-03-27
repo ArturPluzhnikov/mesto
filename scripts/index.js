@@ -47,6 +47,7 @@ const popupPhotoImage = popupPhoto.querySelector('.popup-photo__image');
 const popupPhotoTitle = popupPhoto.querySelector('.popup-photo__title');
 const formPlacesSubmitButton = formPlaces.querySelector('.form__button');
 const popups = Array.from(document.querySelectorAll('.popup'));
+const inputList = Array.from(formPlaces.querySelectorAll(config.inputSelector));
 
 
 function handleFormProfileSubmit(evt) {
@@ -101,44 +102,47 @@ function handleScaleCard(evt) {
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  const inputList = Array.from(formPlaces.querySelectorAll(config.inputSelector));
-  toggleButtonView(inputList, formPlacesSubmitButton, config.inactiveButtonClass);
-  document.addEventListener('keydown', handleCloseByEsc);
-  popups.forEach((popup) => {
-    popup.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('popup_opened')) {
-        closePopup(evt.target);
-      };
-    });
-  });
-};
+  document.addEventListener('keydown', handleCloseByEsc); 
+  };
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', handleCloseByEsc);
 };
 
-function handleCloseByEsc(evt) {
-  if (evt.key === 'Escape') {
-    popups.forEach((popup) => {
-      closePopup(popup);
-    });
-  };
-};
+  function handleCloseByEsc(evt) { 
+    const activePopup = document.querySelector('.popup_opened');
+    if (evt.key === 'Escape') {
+      closePopup(activePopup)
+    };
+  }; 
 
 function addListeners(el) {
   el.querySelector('.grid-element__trash').addEventListener('click', handleDeleteCard);
   el.querySelector('.grid-element__emoji').addEventListener('click', handleLikeCard);
   el.querySelector('.grid-element__image').addEventListener('click', handleScaleCard);
 };
+
 formPlaces.addEventListener('submit', handleFormPlacesSubmit);
 formProfile.addEventListener('submit', handleFormProfileSubmit); 
-popupProfileOpenButton.addEventListener('click', () => {
-  formProfileNameInput.value = formProfileNameOutput.textContent;
-  formProfileJobInput.value = formProfileJobOutput.textContent;
-  openPopup(popupProfile)
-});
-popupPlacesOpenButton.addEventListener('click', () => openPopup(popupAddPlaces));
+popupProfileOpenButton.addEventListener('click', openPopupProfile);
+popupPlacesOpenButton.addEventListener('click', openPopupPlaces);
 popupProfileCloseButton.addEventListener('click', () => closePopup(popupProfile));
 popupPhotoCloseButton.addEventListener('click', () => closePopup(popupPhoto));
 popupPlacesCloseButton.addEventListener('click', () => closePopup(popupAddPlaces));
+document.addEventListener('click', (evt) => {
+  if (evt.target.classList.contains('popup_opened')) {
+    closePopup(evt.target);
+  };
+});
+
+function openPopupProfile() {
+  formProfileNameInput.value = formProfileNameOutput.textContent;
+  formProfileJobInput.value = formProfileJobOutput.textContent;
+  openPopup(popupProfile)
+};
+
+function openPopupPlaces () {
+  toggleButtonView(inputList, formPlacesSubmitButton, config.inactiveButtonClass);
+  openPopup(popupAddPlaces);
+};
