@@ -45,6 +45,8 @@ const formProfileNameOutput = document.querySelector('.profile__title');
 const formProfileJobOutput = document.querySelector('.profile__subtitle');
 const popupPhotoImage = popupPhoto.querySelector('.popup-photo__image');
 const popupPhotoTitle = popupPhoto.querySelector('.popup-photo__title');
+const formPlacesSubmitButton = formPlaces.querySelector('.form__button');
+const popups = Array.from(document.querySelectorAll('.popup'));
 
 
 function handleFormProfileSubmit(evt) {
@@ -91,6 +93,7 @@ function handleLikeCard(evt) {
 
 function handleScaleCard(evt) {
   openPopup(popupPhoto);
+  
   popupPhotoImage.src = evt.target.src;
   popupPhotoImage.alt = evt.target.alt;
   popupPhotoTitle.textContent = evt.target.alt;
@@ -98,10 +101,29 @@ function handleScaleCard(evt) {
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  const inputList = Array.from(formPlaces.querySelectorAll(config.inputSelector));
+  toggleButtonView(inputList, formPlacesSubmitButton, config.inactiveButtonClass);
+  document.addEventListener('keydown', handleCloseByEsc);
+  popups.forEach((popup) => {
+    popup.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains('popup_opened')) {
+        closePopup(evt.target);
+      };
+    });
+  });
 };
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', handleCloseByEsc);
+};
+
+function handleCloseByEsc(evt) {
+  if (evt.key === 'Escape') {
+    popups.forEach((popup) => {
+      closePopup(popup);
+    });
+  };
 };
 
 function addListeners(el) {
@@ -116,7 +138,7 @@ popupProfileOpenButton.addEventListener('click', () => {
   formProfileJobInput.value = formProfileJobOutput.textContent;
   openPopup(popupProfile)
 });
-popupPlacesOpenButton.addEventListener('click', () => openPopup(popupAddPlaces))
+popupPlacesOpenButton.addEventListener('click', () => openPopup(popupAddPlaces));
 popupProfileCloseButton.addEventListener('click', () => closePopup(popupProfile));
 popupPhotoCloseButton.addEventListener('click', () => closePopup(popupPhoto));
 popupPlacesCloseButton.addEventListener('click', () => closePopup(popupAddPlaces));

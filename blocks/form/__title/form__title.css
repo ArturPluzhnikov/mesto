@@ -4,7 +4,7 @@
   font-size: 24px;
   line-height: 29px;
   color: black;
-  margin: 34px 36px 46px;
+  margin: 34px 36px 21px;
   text-align: left;
 }
 
@@ -12,6 +12,6 @@
   .form__title {
     font-size: 18px;
     line-height: 22px;
-    margin: 25px 22px 75px;
+    margin: 25px 22px 42px;
   }
 }
