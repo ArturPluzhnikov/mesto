@@ -110,9 +110,10 @@ function closePopup(popup) {
   document.removeEventListener('keydown', handleCloseByEsc);
 };
 
+
   function handleCloseByEsc(evt) { 
-    const activePopup = document.querySelector('.popup_opened');
     if (evt.key === 'Escape') {
+      const activePopup = document.querySelector('.popup_opened');
       closePopup(activePopup)
     };
   }; 
