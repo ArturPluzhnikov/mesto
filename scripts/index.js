@@ -74,7 +74,8 @@ function createCard(cardInfo) {
 
 function openPopup(popups) {
   popups.classList.add('popup_opened');
-  document.addEventListener('keydown', handleCloseByEsc); ;
+  document.addEventListener('keydown', handleCloseByEsc);
+  document.addEventListener('click', handleCloseByOverlay);
 };
 
 function openPopupProfile() {
@@ -87,12 +88,14 @@ function openPopupProfile() {
 function openPopupAddPlaces() {
   popupAddPlacesValidation.resetValidation();
   formPlaces.reset();
+  popupAddPlacesValidation.resetValidation();
   openPopup(popupAddPlaces);
 };
 
 function closePopup(popups) {
   popups.classList.remove('popup_opened');
   document.removeEventListener('keydown', handleCloseByEsc);
+  document.removeEventListener('click', handleCloseByOverlay);
 };
 
 function handleCloseByEsc (evt) {
@@ -102,11 +105,11 @@ function handleCloseByEsc (evt) {
   };
 };
 
-document.addEventListener('click', (evt) => {
+function handleCloseByOverlay(evt) {
   if (evt.target.classList.contains('popup_opened')) {
       closePopup(evt.target);
   };
-});
+}
 
 function handleFormProfileSubmit(evt) {
   evt.preventDefault();
