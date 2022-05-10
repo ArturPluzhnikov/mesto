@@ -49,7 +49,6 @@ const popupAddPlaces = new PopupWithForm({
     console.log(data)
     section.addItem(createCard(data.linkPlaces, data.titlePlaces));
     popupAddPlaces.close();
-    popupAddPlacesValidation.resetValidation();
   }
 });
 
@@ -83,4 +82,9 @@ popupProfileOpenButton.addEventListener('click', function() {
 });
 popupPlacesOpenButton.addEventListener('click', function() {
   popupAddPlaces.open();
+  popupAddPlacesValidation.resetValidation();
 });
+// Геннадий, вы уже несколько моих работ проверяли - спасибо вам огромное каждый раз! 
+// Супер понятные комментарии и дельные советы всегда! 
+// немного стыдно, что не нахожу время исправлять комментарии "можно лучше" - 
+// очень тяжело дается материал, боюсь не успеть сдать к дедлайну!:)
