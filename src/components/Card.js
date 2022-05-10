@@ -1,16 +1,14 @@
-import { handleScaleCard } from "./index.js";
-
 export class Card {
-  constructor(card, cardTemplate) {
-    this._name = card.name;
-    this._link = card.link;
+  constructor(link, name, cardTemplate, handleCardClick) {
+    this._name = name;
+    this._link = link;
     this._cardTemplate = cardTemplate;
+    this._handleCardClick = handleCardClick;
   };
-
+  
   _getTemplate() {
-    const cardElement = this._cardTemplate.querySelector('.grid-element').cloneNode(true);
-
-    return cardElement;
+    const userElement = this._cardTemplate.content.querySelector('.grid-element').cloneNode(true);
+    return userElement;
   };
 
   generateCard() {
@@ -19,7 +17,6 @@ export class Card {
     this._card.querySelector('.grid-element__title').textContent = this._name;
     this._cardImage.alt = this._name;
     this._cardImage.src = this._link;
-    
     this._setEventListeners();
 
     return this._card;
@@ -35,7 +32,8 @@ export class Card {
     });
 
     this._cardImage.addEventListener('click', () => {
-      handleScaleCard(this._link, this._name);
+      this._handleCardClick(this._link, this._name);
     });
   };
 };
+
