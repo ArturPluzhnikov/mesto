@@ -44,8 +44,8 @@ const api = new Api({
 ///////////////////////////////////////////////////Получение данных с сервера
 Promise.all([api.getUserInfo(), api.getInitialCards()])
 .then(([data, cards]) => {
-  userInfo.setAvatar(data.avatar)
-  userInfo.setUserInfo(data)
+  userInfo.setAvatar(data.avatar);
+  userInfo.setUserInfo(data);
   section.renderItems(cards);
   console.log()
 })
@@ -116,7 +116,7 @@ const popupEditProfile = new PopupWithForm({
   handleSubmit: 
     (data) => {popupEditProfile.buttonState(true);
     api.changeUserInfo(data)
-      .then(data => {userInfo.setUserInfo(data),
+      .then(data => {userInfo.setUserInfo(data);
       popupEditProfile.close()})
       .catch((err) => {console.log(`Ошибка: ${err}`)})
       .finally(() => {popupEditProfile.buttonState(false)})
