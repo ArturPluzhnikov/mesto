@@ -15,6 +15,8 @@ import {
   popupProfileOpenButton, 
   formProfileNameInput, 
   formProfileJobInput, 
+  formProfileNameOutput,
+  formProfileJobOutput,
   popupPlacesOpenButton, 
   cardTemplate, 
   formPlaces, 
@@ -45,6 +47,7 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
   userInfo.setAvatar(data.avatar)
   userInfo.setUserInfo(data)
   section.renderItems(cards);
+  console.log()
 })
 .catch(err => console.log(err));
 
@@ -112,14 +115,11 @@ const popupEditProfile = new PopupWithForm({
   popupSelector: popupProfileSelector,
   handleSubmit: 
     (data) => {popupEditProfile.buttonState(true);
-
     api.changeUserInfo(data)
-      .then(() => {userInfo.setUserInfo(data)})
-      .then(() => {popupEditProfile.close()})
+      .then(data => {userInfo.setUserInfo(data),
+      popupEditProfile.close()})
       .catch((err) => {console.log(`Ошибка: ${err}`)})
       .finally(() => {popupEditProfile.buttonState(false)})
-      console.log(data)
-    // userInfo.setUserInfo(data);
   }
 });
 

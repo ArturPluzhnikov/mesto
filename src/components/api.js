@@ -18,7 +18,7 @@ export class Api {
       method: 'GET',
       headers: this._headers
     })
-    .then(res => res.json())
+    .then(res => this._error(res));
   };
 
   getUserInfo() {
